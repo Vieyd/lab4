@@ -1,0 +1,164 @@
+\doxysection{RC4 Class Reference}
+\hypertarget{class_r_c4}{}\label{class_r_c4}\index{RC4@{RC4}}
+
+
+Класс, предоставляющий методы для шифрования и дешифрования с использованием \doxylink{class_r_c4}{RC4}.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_r_c4_a357457717d1e99a8621d876b24689352}{KSA}} (byte\mbox{[}$\,$\mbox{]} key)
+\begin{DoxyCompactList}\small\item\em Алгоритм инициализации ключа (KSA) \end{DoxyCompactList}\item 
+static Iterable$<$ Integer $>$ \mbox{\hyperlink{class_r_c4_ae690898630d8c217e8fd553113881611}{PRGA}} (int\mbox{[}$\,$\mbox{]} S)
+\begin{DoxyCompactList}\small\item\em Алгоритм генерации псевдослучайной последовательности (PRGA) \end{DoxyCompactList}\item 
+static Iterable$<$ Integer $>$ \mbox{\hyperlink{class_r_c4_a7dc199f9ed5dfb328f37f8228b620760}{get\+Keystream}} (byte\mbox{[}$\,$\mbox{]} key)
+\begin{DoxyCompactList}\small\item\em Генерирует поток ключей для шифрования/дешифрования. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{class_r_c4_a84c95396a8e6b1b92d5c7ba67404fac8}{encrypt\+Logic}} (byte\mbox{[}$\,$\mbox{]} key, byte\mbox{[}$\,$\mbox{]} text)
+\begin{DoxyCompactList}\small\item\em Шифрует или дешифрует входной текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{class_r_c4_acc39b64355a4b4179410ebb2aba7ced0}{encrypt}} (String key, String plaintext)
+\begin{DoxyCompactList}\small\item\em Шифрует текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{class_r_c4_ac4b958f51436debe738e89dc38c2f640}{decrypt}} (String key, String ciphertext)
+\begin{DoxyCompactList}\small\item\em Дешифрует зашифрованный текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_r_c4_a0b5c28720cea5213f696077adc075a2d}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Основной метод для тестирования шифрования и дешифрования \doxylink{class_r_c4}{RC4}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, предоставляющий методы для шифрования и дешифрования с использованием \doxylink{class_r_c4}{RC4}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_c4_ac4b958f51436debe738e89dc38c2f640}\index{RC4@{RC4}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \label{class_r_c4_ac4b958f51436debe738e89dc38c2f640} 
+static String RC4.\+decrypt (\begin{DoxyParamCaption}\item[{String}]{key}{, }\item[{String}]{ciphertext}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Дешифрует зашифрованный текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Ключ шифрования в виде строки. \\
+\hline
+{\em ciphertext} & -\/ Зашифрованный текст для дешифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Расшифрованный текст в виде строки. 
+\end{DoxyReturn}
+\Hypertarget{class_r_c4_acc39b64355a4b4179410ebb2aba7ced0}\index{RC4@{RC4}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \label{class_r_c4_acc39b64355a4b4179410ebb2aba7ced0} 
+static String RC4.\+encrypt (\begin{DoxyParamCaption}\item[{String}]{key}{, }\item[{String}]{plaintext}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Шифрует текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Ключ шифрования в виде строки. \\
+\hline
+{\em plaintext} & -\/ Открытый текст для шифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный текст в виде шестнадцатеричной строки. 
+\end{DoxyReturn}
+\Hypertarget{class_r_c4_a84c95396a8e6b1b92d5c7ba67404fac8}\index{RC4@{RC4}!encryptLogic@{encryptLogic}}
+\index{encryptLogic@{encryptLogic}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{encryptLogic()}{encryptLogic()}}
+{\footnotesize\ttfamily \label{class_r_c4_a84c95396a8e6b1b92d5c7ba67404fac8} 
+static String RC4.\+encrypt\+Logic (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Шифрует или дешифрует входной текст с использованием алгоритма \doxylink{class_r_c4}{RC4}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Ключ шифрования в виде массива байт. \\
+\hline
+{\em text} & -\/ Текст для шифрования/дешифрования в виде массива байт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный или расшифрованный текст в виде шестнадцатеричной строки.
+\end{DoxyReturn}
+Этот метод выполняет основную логику шифрования/дешифрования. \Hypertarget{class_r_c4_a7dc199f9ed5dfb328f37f8228b620760}\index{RC4@{RC4}!getKeystream@{getKeystream}}
+\index{getKeystream@{getKeystream}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{getKeystream()}{getKeystream()}}
+{\footnotesize\ttfamily \label{class_r_c4_a7dc199f9ed5dfb328f37f8228b620760} 
+static Iterable$<$ Integer $>$ RC4.\+get\+Keystream (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Генерирует поток ключей для шифрования/дешифрования. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Ключ шифрования в виде массива байт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterable, генерирующий поток ключей.
+\end{DoxyReturn}
+Этот метод объединяет KSA и PRGA для генерации потока ключей. \Hypertarget{class_r_c4_a357457717d1e99a8621d876b24689352}\index{RC4@{RC4}!KSA@{KSA}}
+\index{KSA@{KSA}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{KSA()}{KSA()}}
+{\footnotesize\ttfamily \label{class_r_c4_a357457717d1e99a8621d876b24689352} 
+static int\mbox{[}$\,$\mbox{]} RC4.\+KSA (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Алгоритм инициализации ключа (KSA) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Ключ шифрования в виде массива байт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Инициализированный массив S.
+\end{DoxyReturn}
+Этот метод инициализирует массив S на основе предоставленного ключа. \Hypertarget{class_r_c4_a0b5c28720cea5213f696077adc075a2d}\index{RC4@{RC4}!main@{main}}
+\index{main@{main}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{class_r_c4_a0b5c28720cea5213f696077adc075a2d} 
+static void RC4.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Основной метод для тестирования шифрования и дешифрования \doxylink{class_r_c4}{RC4}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ Аргументы командной строки (не используются). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_r_c4_ae690898630d8c217e8fd553113881611}\index{RC4@{RC4}!PRGA@{PRGA}}
+\index{PRGA@{PRGA}!RC4@{RC4}}
+\doxysubsubsection{\texorpdfstring{PRGA()}{PRGA()}}
+{\footnotesize\ttfamily \label{class_r_c4_ae690898630d8c217e8fd553113881611} 
+static Iterable$<$ Integer $>$ RC4.\+PRGA (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{S}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Алгоритм генерации псевдослучайной последовательности (PRGA) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & -\/ Инициализированный массив. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterable, генерирующий поток ключей.
+\end{DoxyReturn}
+Этот метод генерирует поток ключей на основе массива S. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_r_c4_8java}{RC4.\+java}}\end{DoxyCompactItemize}

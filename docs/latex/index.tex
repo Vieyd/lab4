@@ -1,0 +1,26 @@
+\chapter{RC4 Алгоритм Шифрования}
+\hypertarget{index}{}\label{index}\index{RC4 Алгоритм Шифрования@{RC4 Алгоритм Шифрования}}
+\hypertarget{index_intro}{}\doxysection{\texorpdfstring{Введение}{Введение}}\label{index_intro}
+Этот проект реализует алгоритм шифрования \doxylink{class_r_c4}{RC4} на языке Java. Алгоритм \doxylink{class_r_c4}{RC4} представляет собой потоковый шифр, который используется для шифрования и дешифрования данных.\hypertarget{index_usage}{}\doxysection{\texorpdfstring{Использование}{Использование}}\label{index_usage}
+Для шифрования или дешифрования текста, используйте методы encrypt и decrypt\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{String\ key\ =\ \textcolor{stringliteral}{"{}not-\/so-\/random-\/key"{}};}
+\DoxyCodeLine{String\ plaintext\ =\ \textcolor{stringliteral}{"{}Chu\ pa\ pi"{}};}
+\DoxyCodeLine{String\ ciphertext\ =\ \mbox{\hyperlink{class_r_c4}{RC4}}.\mbox{\hyperlink{class_r_c4_acc39b64355a4b4179410ebb2aba7ced0}{encrypt}}(key,\ plaintext);}
+\DoxyCodeLine{System.out.println(\textcolor{stringliteral}{"{}ciphertext:\ "{}}\ +\ ciphertext);}
+\DoxyCodeLine{String\ decrypted\ =\ \mbox{\hyperlink{class_r_c4}{RC4}}.\mbox{\hyperlink{class_r_c4_ac4b958f51436debe738e89dc38c2f640}{decrypt}}(key,\ ciphertext);}
+\DoxyCodeLine{System.out.println(\textcolor{stringliteral}{"{}decrypted:\ "{}}\ +\ decrypted);}
+
+\end{DoxyCode}
+\hypertarget{index_methods}{}\doxysection{\texorpdfstring{Методы}{Методы}}\label{index_methods}
+Основные методы включают\+:
+\begin{DoxyItemize}
+\item KSA\+: Алгоритм инициализации ключа.
+\item PRGA\+: Алгоритм генерации псевдослучайной последовательности.
+\item get\+Keystream\+: Генерация потока ключей.
+\item encrypt\+Logic\+: Основная логика шифрования/дешифрования.
+\item encrypt\+: Шифрование текста.
+\item decrypt\+: Дешифрование текста. 
+\end{DoxyItemize}
